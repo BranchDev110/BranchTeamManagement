@@ -11,12 +11,12 @@ export const teamSlice = createSlice({
     add: (state) => {},
     remove: (state) => {},
     edit: (state) => {},
-    set: (state, action) => {
+    setTeam: (state, action) => {
       state.value = [...action.payload];
     },
   },
 });
 
-export const { add, remove, edit, set } = teamSlice.actions;
+export const { add, remove, edit, setTeam } = teamSlice.actions;
 
 export default teamSlice.reducer;

@@ -11,12 +11,12 @@ export const memberSlice = createSlice({
     add: (state) => {},
     remove: (state) => {},
     edit: (state) => {},
-    set: (state, action) => {
+    setMember: (state, action) => {
       state.value = [...action.payload];
     },
   },
 });
 
-export const { add, remove, edit, set } = memberSlice.actions;
+export const { add, remove, edit, setMember } = memberSlice.actions;
 
 export default memberSlice.reducer;
