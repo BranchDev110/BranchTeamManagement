@@ -1,0 +1,70 @@
+.sidebar {
+  width: 264px;
+  height: 100%;
+  background-color: var(--sidebar-back-color);
+  box-shadow: 1px 0 20px 0 var(--sidebar-back-color);
+}
+
+.sidebar__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.sidebar__logo > p {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 0 0 0;
+}
+
+.sidebar__list {
+  position: relative;
+  list-style: none;  
+}
+
+.sidebar__list__item {
+  position: relative;
+  margin: 5px 0 0 0;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.sidebar__list__item > a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--sidebar-color);
+}
+
+.sidebar__list__item:hover {
+  color: var(--sidebar-hover-color);
+}
+
+.sidebar__list__item--active {
+  background-color: var(--sidebar-active-back-color);
+  color: var(--sidebar-active-color);
+}
+
+.sidebar__list__item--active::before{
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--sidebar-hover-color);
+}
+
+.sidebar__list__item > a > svg {
+  padding: 0 5px;
+  width: 30px;
+  font-size: 16px;  
+}
+
+.sidebar__list__item > a > span {
+  flex: 1;
+  padding: 5px 0;
+}

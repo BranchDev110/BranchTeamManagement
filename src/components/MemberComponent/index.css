@@ -1,0 +1,9 @@
+.member__card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  border: 1px solid gray;
+  margin: 10px;
+}
