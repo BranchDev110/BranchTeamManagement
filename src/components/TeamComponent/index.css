@@ -1,0 +1,14 @@
+.team {
+  width: 300px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
+
+.team__date{
+  font-size: 12px;
+  color: var(--sidebar-color);
+  padding: 10px 0;
+}

@@ -1,0 +1,19 @@
+.teamadd{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px dashed var(--sidebar-back-color);
+  color: var(--sidebar-back-color);
+  cursor: pointer;
+}
+
+.teamadd:hover{
+  opacity: 0.5;
+  background-color: var(--sidebar-color);
+}

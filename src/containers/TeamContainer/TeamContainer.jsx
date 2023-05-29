@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { set } from "../../store/slice/teamSlice";
 import apiService from "../../helper/ApiService";
+import { TeamComponent } from "../../components/TeamComponent";
+
+import './index.css';
+import TeamAddComponent from "../../components/TeamAddComponent/TeamAddComponent";
 
 const TeamContainer = () => {
   const team = useSelector((state) => state.team.value);
@@ -17,11 +21,12 @@ const TeamContainer = () => {
   }, [dispatch]);
   
   return (
-    <ul>
+    <div className="team__container">
+      <TeamAddComponent />
       {team.map((item, index) => (
-        <li key={`team-${index}`}>{item.name}</li>
+        <TeamComponent data={item} key={`team-${index}`}/>
       ))}
-    </ul>
+    </div>
   );
 };
 
