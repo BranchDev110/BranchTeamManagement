@@ -1,0 +1,6 @@
+.teambadge{
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--background-color);
+}
