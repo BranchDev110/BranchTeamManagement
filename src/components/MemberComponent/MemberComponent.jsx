@@ -1,6 +1,7 @@
 import { TeamBadge } from "../TeamBadge";
 import { colors } from "../../utils/color";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 const MemberComponent = ({ data }) => {
   return (
@@ -12,7 +13,9 @@ const MemberComponent = ({ data }) => {
         <p className="member__card__body__name">{`${data.first_name} ${data.last_name}`}</p>
         <p className="member__card__body__email">{data.email}</p>
         <div className="member__card__body__team">
-          <TeamBadge data={data.team} />
+          <Link to={`/team/${data.team.id}`}>
+            <TeamBadge data={data.team} />
+          </Link>
         </div>
       </div>
       <div className="member__card__footer">

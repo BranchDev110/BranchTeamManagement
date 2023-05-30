@@ -10,6 +10,7 @@ import { setMember } from "./store/slice/memberSlice";
 import "./App.css";
 import { router } from "./utils/routeName";
 import { set } from "./store/slice/routeSlice";
+import { TeamDetailContainer } from "./containers/TeamDetailContainer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="/members" element={<MemberContainer />} />
             <Route path="/teams" element={<TeamContainer />} />
             <Route path="/todo" element={<TodoContainer />} />
+            <Route path="/team/:id" element={<TeamDetailContainer />} />
           </Routes>
         </div>
       </div>
