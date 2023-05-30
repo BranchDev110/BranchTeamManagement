@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import apiService from "./helper/ApiService";
@@ -8,9 +8,12 @@ import { setTeam } from "./store/slice/teamSlice";
 import { setMember } from "./store/slice/memberSlice";
 
 import "./App.css";
+import { router } from "./utils/routeName";
+import { set } from "./store/slice/routeSlice";
 
 const App = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     apiService
@@ -26,6 +29,11 @@ const App = () => {
         dispatch(setMember(data.members));
       })
       .catch((error) => console.log(error));
+
+    const path = location.pathname.split('/').at(1);
+    let index = router.findIndex((item) => item.routeName === path);
+    if(index === -1) index = 0;
+    dispatch(set({id: index, ...router[index]}));
   }, [dispatch]);
   return (
     <div className="App">
@@ -35,8 +43,8 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<DashboardContainer />} />
-            <Route path="/member" element={<MemberContainer />} />
-            <Route path="/team" element={<TeamContainer />} />
+            <Route path="/members" element={<MemberContainer />} />
+            <Route path="/teams" element={<TeamContainer />} />
             <Route path="/todo" element={<TodoContainer />} />
           </Routes>
         </div>
