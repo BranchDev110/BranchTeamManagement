@@ -1,0 +1,21 @@
+.todoitem {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.todoitem__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: gray;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.todoitem__text--completed {
+  text-decoration: line-through;
+}
