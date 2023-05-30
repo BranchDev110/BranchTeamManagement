@@ -7,3 +7,8 @@
 .container {
   flex: 1;
 }
+
+.content {
+  display: flex;
+  justify-content: center;
+}

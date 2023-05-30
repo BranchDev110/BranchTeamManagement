@@ -16,14 +16,28 @@ export const todoSlice = createSlice({
           data: action.payload,
           isCompleted: false,
           isDeleted: false,
+          isEdit: false,
         },
       ];
     },
     remove: (state) => {
-      const newState = state.value.filter((item) => !item.isCompleted);
+      const newState = state.value.map((item) =>
+        item.isCompleted ? { ...item, isDeleted: true } : item
+      );
       state.value = [...newState];
     },
-    edit: (data) => {},
+    removeItem: (state, action) => {
+      const newState = state.value.filter((item) => item.id !== action.payload);
+      state.value = [...newState];
+    },
+    edit: (state, action) => {
+      const newState = state.value.map((item) =>
+        item.id === action.payload.id
+          ? { ...item, data: action.payload.data, isEdit: true }
+          : item
+      );
+      state.value = [...newState];
+    },
     revert: (state, action) => {
       const newState = state.value.map((item) =>
         item.id === action.payload
@@ -32,10 +46,10 @@ export const todoSlice = createSlice({
       );
       state.value = [...newState];
     },
-    set: (data) => {},
+    set: () => {},
   },
 });
 
-export const { add, remove, edit, set, revert } = todoSlice.actions;
+export const { add, remove, edit, set, revert, removeItem } = todoSlice.actions;
 
 export default todoSlice.reducer;

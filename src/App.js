@@ -32,12 +32,14 @@ const App = () => {
       <Sidebar />
       <div className="container">
         <Header />
-        <Routes>
-          <Route path="/" element={<DashboardContainer />} />
-          <Route path="/member" element={<MemberContainer />} />
-          <Route path="/team" element={<TeamContainer />} />
-          <Route path="/todo" element={<TodoContainer />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<DashboardContainer />} />
+            <Route path="/member" element={<MemberContainer />} />
+            <Route path="/team" element={<TeamContainer />} />
+            <Route path="/todo" element={<TodoContainer />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );
