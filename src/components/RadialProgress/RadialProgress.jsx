@@ -1,5 +1,3 @@
-import "./index.css";
-
 const RadialProgress = ({ type, value }) => {
   const dashArray = 50 * Math.PI * 2;
   const dashOffset = dashArray - (dashArray * value) / 100;

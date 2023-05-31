@@ -3,5 +3,5 @@ export const router = [
   { routeName: "teams", displayName: "Teams" },
   { routeName: "members", displayName: "Members" },
   { routeName: "todo", displayName: "Todo List" },
-  { routeName: "team", displayName: "Team" }
+  { routeName: "team", displayName: "Team" },
 ];
