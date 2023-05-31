@@ -9,17 +9,10 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { set } from "../../store/slice/routeSlice";
-import { router } from "../../utils/routeName";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
-  const dispatch = useDispatch();
   const currentRoute = useSelector((state) => state.route.value);
-
-  const handleItemClick = (index) => {
-    dispatch(set({id: index, ...router[index]}));
-  }
 
   const getClassName = (index) => {
     return `sidebar__list__item ${currentRoute.id === index && 'sidebar__list__item--active'}`;
@@ -32,22 +25,22 @@ const Sidebar = () => {
         <p>Sprint FWD</p>
       </div>
       <ul className="sidebar__list">
-        <li className={getClassName(0)} onClick={() => handleItemClick(0)}>
+        <li className={getClassName(0)}>
           <Link to="/">
             <FontAwesomeIcon icon={faDashboard} /> <span>Dashboard</span>
           </Link>
         </li>
-        <li className={getClassName(1)} onClick={() => handleItemClick(1)}>
+        <li className={getClassName(1)}>
           <Link to="/teams">
             <FontAwesomeIcon icon={faPeopleGroup} /> <span>Teams</span>
           </Link>
         </li>
-        <li className={getClassName(2)} onClick={() => handleItemClick(2)}>
+        <li className={getClassName(2)}>
           <Link to="/members">
             <FontAwesomeIcon icon={faUser} /> <span>Members</span>
           </Link>
         </li>
-        <li className={getClassName(3)} onClick={() => handleItemClick(3)}>
+        <li className={getClassName(3)}>
           <Link to="/todo">
             <FontAwesomeIcon icon={faTasks} /> <span>Todo List</span>
           </Link>

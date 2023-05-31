@@ -4,6 +4,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-left: -10px;
+  z-index: 5;
 }
 
 .memberbadge > img {

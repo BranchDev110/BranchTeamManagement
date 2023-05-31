@@ -24,7 +24,7 @@ const TeamComponent = ({ data }) => {
                 data={item.avatar}
               />
             ))}
-          <span>{teamMember.length > 2 && `+${teamMember.length - 2}`}</span>
+          {teamMember.length > 2 && <span className="team__count">{`+${teamMember.length - 2}`}</span>}
         </div>
       </div>
     </Link>

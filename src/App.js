@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import apiService from "./helper/ApiService";
-import { MemberContainer, TeamContainer, TodoContainer, DashboardContainer, Sidebar, Header } from "./containers";
+import { MemberContainer, TeamContainer, TodoContainer, DashboardContainer, Sidebar, Header, ErrorContainer } from "./containers";
 import { setTeam } from "./store/slice/teamSlice";
 import { setMember } from "./store/slice/memberSlice";
 
@@ -30,12 +30,13 @@ const App = () => {
         dispatch(setMember(data.members));
       })
       .catch((error) => console.log(error));
+  }, [dispatch]);
 
+  useEffect(() => {
     const path = location.pathname.split('/').at(1);
     let index = router.findIndex((item) => item.routeName === path);
-    if(index === -1) index = 0;
     dispatch(set({id: index, ...router[index]}));
-  }, [dispatch]);
+  }, [location.pathname])
   return (
     <div className="App">
       <Sidebar />
@@ -48,6 +49,7 @@ const App = () => {
             <Route path="/teams" element={<TeamContainer />} />
             <Route path="/todo" element={<TodoContainer />} />
             <Route path="/team/:id" element={<TeamDetailContainer />} />
+            <Route path="*" element={<ErrorContainer />} />
           </Routes>
         </div>
       </div>

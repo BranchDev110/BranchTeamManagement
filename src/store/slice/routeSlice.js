@@ -12,7 +12,16 @@ export const routeSlice = createSlice({
   name: "route",
   initialState,
   reducers: {
-    set: (state, action) => {state.value = {...action.payload}}
+    set: (state, action) => {
+      if(action.payload.id === -1){
+        alert(state.value.id);
+        state.value = {...action.payload, id: state.value.id};
+      }
+      else{
+        alert(action.payload.id);
+        state.value = {...action.payload};
+      }
+    }
   },
 });
 

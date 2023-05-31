@@ -5,7 +5,10 @@
       "first_name": "Bonnie",
       "last_name": "Doyle",
       "email": "bonnie.doyle@email.com",
-      "avatar": "./avatar1.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_1.jpg",
+      "role": "Manager",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 1,
         "name": "Project"
@@ -16,7 +19,10 @@
       "first_name": "Siu",
       "last_name": "Maggio",
       "email": "siu.maggio@email.com",
-      "avatar": "./avatar2.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_2.jpg",
+      "role": "Manager",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 2,
         "name": "Engineering"
@@ -27,7 +33,10 @@
       "first_name": "Nella",
       "last_name": "Brakus",
       "email": "nella.brakus@email.com",
-      "avatar": "./avatar3.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_3.jpg",
+      "role": "Manager",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 3,
         "name": "Design"
@@ -38,7 +47,38 @@
       "first_name": "Clayton",
       "last_name": "Connelly",
       "email": "clayton.connelly@email.com",
-      "avatar": "./avatar4.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_5.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
+      "team": {
+        "id": 2,
+        "name": "Engineering"
+      }
+    },
+    {
+      "id": 1088,
+      "first_name": "Clayton",
+      "last_name": "Connelly",
+      "email": "clayton.connelly@email.com",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_5.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
+      "team": {
+        "id": 2,
+        "name": "Engineering"
+      }
+    },
+    {
+      "id": 1888,
+      "first_name": "Clayton",
+      "last_name": "Connelly",
+      "email": "clayton.connelly@email.com",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_5.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 2,
         "name": "Engineering"
@@ -49,7 +89,10 @@
       "first_name": "Vernia",
       "last_name": "Purdy",
       "email": "vernia.purdy@email.com",
-      "avatar": "./avatar5.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_4.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 1,
         "name": "Project"
@@ -60,7 +103,10 @@
       "first_name": "Coretta",
       "last_name": "Homenick",
       "email": "coretta.homenick@email.com",
-      "avatar": "./avatar1.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_6.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 4,
         "name": "QA"
@@ -71,7 +117,10 @@
       "first_name": "Wilson",
       "last_name": "O'Hara",
       "email": "wilson.o'hara@email.com",
-      "avatar": "./avatar2.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_7.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 2,
         "name": "Engineering"
@@ -82,7 +131,10 @@
       "first_name": "Deanna",
       "last_name": "Kuvalis",
       "email": "deanna.kuvalis@email.com",
-      "avatar": "./avatar3.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_8.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 2,
         "name": "Engineering"
@@ -93,7 +145,10 @@
       "first_name": "Rafaela",
       "last_name": "Kiehn",
       "email": "rafaela.kiehn@email.com",
-      "avatar": "./avatar4.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_9.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 4,
         "name": "QA"
@@ -104,7 +159,10 @@
       "first_name": "Jeffry",
       "last_name": "Block",
       "email": "jeffry.block@email.com",
-      "avatar": "./avatar5.png",
+      "avatar": "https://api-prod-minimal-v4.vercel.app/assets/images/avatars/avatar_1.jpg",
+      "role": "Engineer",
+      "salary": "$130k/yr",
+      "joined_date": "May 30, 2023",
       "team": {
         "id": 3,
         "name": "Design"
