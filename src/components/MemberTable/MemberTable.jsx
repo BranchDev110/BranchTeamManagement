@@ -1,8 +1,8 @@
 import MemberTableRow from "../MemberTableRow/MemberTableRow";
 
-import './index.css';
+import "./index.css";
 
-const MemberTable = ({data}) => {
+const MemberTable = ({ data }) => {
   return (
     <div className="table">
       <div className="thead">
@@ -14,12 +14,12 @@ const MemberTable = ({data}) => {
         </div>
       </div>
       <div className="tbody">
-        {
-          data.map(item => <MemberTableRow data={item} key={`table-item-${item.id}`}/>)
-        }
+        {data.map((item) => (
+          <MemberTableRow data={item} key={`table-item-${item.id}`} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MemberTable;

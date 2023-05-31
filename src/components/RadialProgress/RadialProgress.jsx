@@ -1,14 +1,14 @@
 import "./index.css";
 
 const RadialProgress = ({ type, value }) => {
-  const dashArray = value * Math.PI * 2;
-  const dashOffset = dashArray - (dashArray * 25) / 100;
+  const dashArray = 50 * Math.PI * 2;
+  const dashOffset = dashArray - (dashArray * value) / 100;
 
   const colors = {
-    purple: '#8396ff',
-    success: '#30d9a1',
-    primary: '#2ef5f9'
-  }
+    purple: "#8396ff",
+    success: "#30d9a1",
+    primary: "#2ef5f9",
+  };
 
   return (
     <div className="radialprogress">
@@ -36,8 +36,16 @@ const RadialProgress = ({ type, value }) => {
             strokeDashoffset: dashOffset,
           }}
         />
-        <text fontSize="16px" x="50%" y="50%" textAnchor="middle" dy=".3em" stroke="lightgray" fill="lightgray">
-          25%
+        <text
+          fontSize="16px"
+          x="50%"
+          y="50%"
+          textAnchor="middle"
+          dy=".3em"
+          stroke="lightgray"
+          fill="lightgray"
+        >
+          {value}%
         </text>
       </svg>
     </div>

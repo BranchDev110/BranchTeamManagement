@@ -1,13 +1,13 @@
-import './index.css'
+import "./index.css";
 
 const MemberTableRow = ({ data }) => {
   return (
     <div className="tr">
       <div className="td col__user">
-        <div className='td__avatar'>
+        <div className="td__avatar">
           <img src={data.avatar} alt="Avatar" />
         </div>
-        <div className='td__contact'>
+        <div className="td__contact">
           <p className="td__username">{`${data.first_name}  ${data.last_name}`}</p>
           <p className="td__email">{data.email}</p>
         </div>

@@ -1,7 +1,7 @@
 .todo__container {
   display: flex;
   flex-direction: column;
-  width: 900px;
+  max-width: 900px;
   margin: auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
   border-radius: 10px;
@@ -37,4 +37,25 @@
 .todo__list {
   height: 600px;
   overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .todo__container {
+    max-width: 500px;
+  }
+  .todo__control {
+    display: block;
+  }
+  .todo__displaycontrol {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .todo__container {
+    max-width: 360px;
+  }
+  .todo__managementcontrol > button {
+    margin-top: 10px;
+  }
 }

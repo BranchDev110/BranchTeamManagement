@@ -17,7 +17,7 @@ const TeamDetailContainer = () => {
     <div className="teamdetail__container">
       <div className="widget teamdetail__info">
         <h2>{data?.name}</h2>
-        <p>Manager: Steven Fredericks</p>
+        <p>Steven Fredericks</p>
       </div>
       <div className="widget salary">
         <RadialProgress type="purple" value={68}/>
@@ -26,15 +26,15 @@ const TeamDetailContainer = () => {
           <p className="widget__info__secondary">Total salary</p>
         </div>
       </div>
-      <div className="widget workhour" value={120}>
-        <RadialProgress type="success"/>
+      <div className="widget workhour">
+        <RadialProgress type="success" value={80}/>
         <div className="widget__info">
           <p className="widget__info__primary">1,275 (hr)</p>
           <p className="widget__info__secondary">Total hour</p>
         </div>
       </div>
       <div className="widget projects">
-        <RadialProgress type="primary" value={100}/>
+        <RadialProgress type="primary" value={75}/>
         <div className="widget__info">
           <p className="widget__info__primary">12</p>
           <p className="widget__info__secondary">Total project</p>

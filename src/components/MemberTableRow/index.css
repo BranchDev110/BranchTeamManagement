@@ -7,7 +7,9 @@
   font-size: 0.875rem;
 }
 
-.td__role, .td__joined, .td__salary {
+.td__role,
+.td__joined,
+.td__salary {
   font-size: 0.875rem;
 }
 

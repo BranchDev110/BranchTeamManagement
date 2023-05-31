@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 const MemberComponent = ({ data }) => {
   return (
     <div className="member__card">
-      <div className="member__card__header" style={{backgroundColor: colors[data.id % 10]}}>
-        <span></span> 
+      <div
+        className="member__card__header"
+        style={{ backgroundColor: colors[data.id % 10] }}
+      >
+        <span></span>
         <img src={data.avatar} alt="Avatar" />
       </div>
       <div className="member__card__body">

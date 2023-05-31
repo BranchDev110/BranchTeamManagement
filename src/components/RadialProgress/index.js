@@ -1,1 +1,1 @@
-export {default as RadialProgress} from './RadialProgress';
+export { default as RadialProgress } from "./RadialProgress";

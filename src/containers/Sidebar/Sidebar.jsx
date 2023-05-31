@@ -31,7 +31,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
-        <img src="https://photos.wellfound.com/startups/i/7406443-3be75e3b543b0aee4efd6fcb52a7d810-medium_jpg.jpg?buster=1589308628" alt="logo" width={100} height={100}/>
+        <img src="https://photos.wellfound.com/startups/i/7406443-3be75e3b543b0aee4efd6fcb52a7d810-medium_jpg.jpg?buster=1589308628" alt="logo"/>
         <p>Sprint FWD</p>
       </div>
       <ul className="sidebar__list">

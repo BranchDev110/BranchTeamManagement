@@ -1,1 +1,1 @@
-export { default as MemberTableRow } from './MemberTableRow';
+export { default as MemberTableRow } from "./MemberTableRow";
