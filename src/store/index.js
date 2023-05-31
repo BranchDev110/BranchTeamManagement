@@ -7,7 +7,7 @@ import teamReducer from "./slice/teamSlice";
 import routeReducer from "./slice/routeSlice";
 
 const persistConfig = {
-  key: "root",
+  key: "sprintfwd",
   storage,
 };
 
