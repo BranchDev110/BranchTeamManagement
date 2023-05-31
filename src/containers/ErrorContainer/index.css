@@ -1,0 +1,13 @@
+.error__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.error__container > p {
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.1), 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 64px;
+  font-weight: bold;
+}

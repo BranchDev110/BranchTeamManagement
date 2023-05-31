@@ -1,0 +1,8 @@
+.member__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  height: 100%;
+  overflow-y: auto;
+}

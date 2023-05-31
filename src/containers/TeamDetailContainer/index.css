@@ -1,0 +1,143 @@
+.teamdetail__container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 100%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.memberlist {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.memberlist > h3 {
+  padding: 15px;
+  height: 50px;
+  color: var(--sidebar-back-color);
+}
+
+.widget {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  color: var(--sidebar-back-color);
+  border-radius: 10px;
+  height: 200px;
+}
+
+.widget__info {
+  margin-left: 15px;
+}
+
+.widget__info p {
+  line-height: 2;
+}
+
+.widget__info > .widget__info__primary {
+  font-size: 1.5rem;
+}
+
+.widget__info > .widget__info__secondary {
+  font-size: 0.875rem;
+  color: rgb(250,250,250);
+}
+
+.teamdetail__info {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  flex-direction: column !important;
+}
+
+.teamdetail__info h2, .teamdetail__info p {
+  line-height: 1.4;
+}
+
+.salary {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: #6366f1;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.workhour {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: #10b981;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.projects {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  background-color: #0ea5e9;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1440px) {
+  .teamdetail__info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .salary {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .workhour {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .projects {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  .memberlist {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .teamdetail__info {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .salary {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .workhour {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .projects {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .memberlist {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  
+}

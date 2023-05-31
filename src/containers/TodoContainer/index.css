@@ -1,0 +1,61 @@
+.todo__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.todo__header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--sidebar-back-color);
+  padding: 50px 30px 20px;
+  border-bottom: 1px solid var(--sidebar-back-color);
+}
+
+.todo__header > p {
+  font-size: 12px;
+}
+
+.todo__body {
+  padding: 10px 30px 20px;
+}
+
+.todo__control {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.todo__control input {
+  width: 300px;
+}
+
+.todo__list {
+  height: 600px;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .todo__container {
+    max-width: 500px;
+  }
+  .todo__control {
+    display: block;
+  }
+  .todo__displaycontrol {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .todo__container {
+    max-width: 360px;
+  }
+  .todo__managementcontrol > button {
+    margin-top: 10px;
+  }
+}
