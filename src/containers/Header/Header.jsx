@@ -19,7 +19,7 @@ const Header = () => {
           <span className="breadcumb">
             <FontAwesomeIcon icon={faHome} /> Home{" "}
             {`${
-              router[index].id !== 0 ? `/ ${router[index].displayName}` : ""
+              index !== 0 ? `/ ${router[index].displayName}` : ""
             }`}
           </span>
         </div>
