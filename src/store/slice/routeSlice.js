@@ -4,7 +4,7 @@ const initialState = {
   value: {
     id: 0,
     routeName: "",
-    displayName: ""
+    displayName: "",
   },
 };
 
@@ -13,15 +13,14 @@ export const routeSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action) => {
-      if(action.payload.id === -1){
+      if (action.payload.id === -1) {
         alert(state.value.id);
-        state.value = {...action.payload, id: state.value.id};
-      }
-      else{
+        state.value = { ...action.payload, id: state.value.id };
+      } else {
         alert(action.payload.id);
-        state.value = {...action.payload};
+        state.value = { ...action.payload };
       }
-    }
+    },
   },
 });
 

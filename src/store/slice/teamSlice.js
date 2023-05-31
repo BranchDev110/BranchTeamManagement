@@ -8,9 +8,6 @@ export const teamSlice = createSlice({
   name: "team",
   initialState,
   reducers: {
-    add: (state) => {},
-    remove: (state) => {},
-    edit: (state) => {},
     setTeam: (state, action) => {
       state.value = [...action.payload];
     },

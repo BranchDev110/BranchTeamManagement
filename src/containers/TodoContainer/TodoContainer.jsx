@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TodoComponent } from "../../components/TodoComponent";
-import { add, revert, remove, removeItem, edit } from "../../store/slice/todoSlice";
+import {
+  add,
+  revert,
+  remove,
+  removeItem,
+  edit,
+} from "../../store/slice/todoSlice";
 
 import "./index.css";
 
@@ -62,7 +68,7 @@ const TodoContainer = () => {
   };
 
   const handleEditTodo = (id, newData) => {
-    dispatch(edit({id, data: newData}));
+    dispatch(edit({ id, data: newData }));
   };
 
   const handleDeleteTodoItem = (id) => {

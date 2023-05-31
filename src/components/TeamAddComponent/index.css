@@ -1,4 +1,4 @@
-.teamadd{
+.teamadd {
   position: relative;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.teamadd:hover{
+.teamadd:hover {
   opacity: 0.5;
   background-color: var(--sidebar-color);
 }
