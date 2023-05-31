@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import apiService from "./helper/ApiService";
@@ -8,13 +8,10 @@ import { setTeam } from "./store/slice/teamSlice";
 import { setMember } from "./store/slice/memberSlice";
 
 import "./App.css";
-import { router } from "./utils/routeName";
-import { set } from "./store/slice/routeSlice";
 import { TeamDetailContainer } from "./containers/TeamDetailContainer";
 
 const App = () => {
   const dispatch = useDispatch();
-  const location = useLocation();
 
   useEffect(() => {
     apiService
@@ -32,11 +29,6 @@ const App = () => {
       .catch((error) => console.log(error));
   }, [dispatch]);
 
-  useEffect(() => {
-    const path = location.pathname.split('/').at(1);
-    let index = router.findIndex((item) => item.routeName === path);
-    dispatch(set({id: index, ...router[index]}));
-  }, [location.pathname])
   return (
     <div className="App">
       <Sidebar />

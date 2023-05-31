@@ -1,18 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
-import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import { router } from "../../utils/routeName";
 
 const Header = () => {
-  const route = useSelector((state) => state.route.value);
+  const location = useLocation();
+
+  const path = location.pathname.split("/").at(1);
+
+  const index = router.findIndex((item) => item.routeName === path);
 
   return (
-    <div className="header">
-      <h2>{route.displayName}</h2>
-      <span className="breadcumb">
-        <FontAwesomeIcon icon={faHome} /> Home {`${route.id !== 0 ? `/ ${route.displayName}` : ''}`}
-      </span>
-    </div>
+    <>
+      {index !== -1 && (
+        <div className="header">
+          <h2>{router[index].displayName}</h2>
+          <span className="breadcumb">
+            <FontAwesomeIcon icon={faHome} /> Home{" "}
+            {`${
+              router[index].id !== 0 ? `/ ${router[index].displayName}` : ""
+            }`}
+          </span>
+        </div>
+      )}
+    </>
   );
 };
 

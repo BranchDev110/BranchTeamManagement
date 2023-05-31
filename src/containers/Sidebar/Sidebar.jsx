@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./index.css";
@@ -8,14 +8,24 @@ import {
   faTasks,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import {router} from '../../utils/routeName';
 
 const Sidebar = () => {
-  const currentRoute = useSelector((state) => state.route.value);
+  const location = useLocation();
+  const path = location.pathname.split('/').at(1);
+  const [ currentItem, setCurrentItem ] = useState(0);
 
-  const getClassName = (index) => {
-    return `sidebar__list__item ${currentRoute.id === index && 'sidebar__list__item--active'}`;
+  useEffect(() => {
+    const index = router.findIndex((item) => item.routeName === path);
+    if(index < 4) {
+      setCurrentItem(index);
+    }
+  }, [path])
+  
+
+  const getClassName = (id) => {
+    return `sidebar__list__item ${currentItem === id && 'sidebar__list__item--active'}`;
   }
 
   return (

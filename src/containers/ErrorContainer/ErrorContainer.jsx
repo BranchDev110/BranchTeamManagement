@@ -1,3 +1,5 @@
+import './index.css'
+
 const ErrorContainer = () => {
   return (
     <div className="error__container">

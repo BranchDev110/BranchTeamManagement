@@ -1,7 +1,11 @@
-import React from "react";
+import './index.css';
 
 const DashboardContainer = () => {
-  return <>Dashboard</>;
+  return (
+    <div className="dashboard__container">
+      Sprint FWD
+    </div>
+  );
 };
 
 export default DashboardContainer;
